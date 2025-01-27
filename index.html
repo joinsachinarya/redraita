@@ -1,1 +1,1373 @@
 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="eff003ec-b844-4d2d-8c2b-eb92119ff19a" data-section-id="eff003ec-b844-4d2d-8c2b-eb92119ff19a">
+
+<htmlCode>
+<div id="root" class="bg-[#E5E7EB]">
+    <div class="flex">
+        <!-- Sidebar Navigation -->
+        <nav class="h-screen w-64 bg-white fixed top-0 left-0 flex flex-col border-r border-neutral-200/20" x-data="{ isOpen: false }">
+            <div class="p-4 border-b border-neutral-200/20">
+                <img src="https://s.ltrbxd.com/static/img/icons/touch-icon-192x192.aac7a971.png" alt="Logo" class="h-10">
+            </div>
+            
+            <div class="flex-1 overflow-y-auto py-4">
+                <a href="#feed" class="flex items-center px-6 py-3 text-neutral-600 hover:bg-neutral-100 active:bg-neutral-200 transition-all">
+                    <span>Feed</span>
+                </a>
+                <a href="#discover" class="flex items-center px-6 py-3 text-neutral-600 hover:bg-neutral-100 transition-all">
+                    <span>Discover</span>
+                </a>
+                <a href="#collections" class="flex items-center px-6 py-3 text-neutral-600 hover:bg-neutral-100 transition-all">
+                    <span>Collections</span>
+                </a>
+                <a href="#activity" class="flex items-center px-6 py-3 text-neutral-600 hover:bg-neutral-100 transition-all">
+                    <span>Activity</span>
+                </a>
+                <a href="#profile" class="flex items-center px-6 py-3 text-neutral-600 hover:bg-neutral-100 transition-all">
+                    <span>Profile</span>
+                </a>
+            </div>
+
+            <div class="p-4 border-t border-neutral-200/20">
+                <div class="flex items-center space-x-3">
+                    <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="Profile" class="h-8 w-8 rounded-full">
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-neutral-700">John Doe</p>
+                        <p class="text-xs text-neutral-500">john@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden fixed top-4 right-4 z-50">
+            <button type="button" class="rounded-lg p-2 bg-white border border-neutral-200/20" @click="isOpen = !isOpen">
+                <svg x-show="!isOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg x-show="isOpen" x-cloak class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="isOpen" x-cloak class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40">
+            <div class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg">
+                <!-- Mobile menu content - same as sidebar -->
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 ml-64 overflow-y-auto">
+            <!-- Header -->
+            <header class="h-16 bg-white border-b border-neutral-200/20 sticky top-0 z-30 flex items-center justify-between px-6">
+                <h1 class="text-xl font-semibold text-neutral-800">Feed</h1>
+                <div class="flex items-center space-x-4">
+                    <input type="search" placeholder="Search..." class="px-4 py-2 rounded-lg border border-neutral-200/20 bg-neutral-50">
+                    <button class="p-2 rounded-lg hover:bg-neutral-100">
+                        <svg class="h-6 w-6 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <MountPoint>
+
+<script>
+// Active link handling
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('nav a');
+    
+    function setActiveLink() {
+        const hash = window.location.hash || '#feed';
+        links.forEach(link => {
+            if(link.getAttribute('href') === hash) {
+                link.classList.add('bg-neutral-100', 'text-neutral-900');
+            } else {
+                link.classList.remove('bg-neutral-100', 'text-neutral-900');
+            }
+        });
+    }
+
+    window.addEventListener('hashchange', setActiveLink);
+    setActiveLink();
+});
+
+// Mobile menu handling
+document.addEventListener('alpine:init', () => {
+    Alpine.store('mobileMenu', {
+        open: false,
+        toggle() {
+            this.open = !this.open;
+        }
+    });
+});
+</script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+</style></element><element id="c3bfc972-cfc5-483a-abcb-c3a56386120b" data-section-id="c3bfc972-cfc5-483a-abcb-c3a56386120b">
+
+<htmlCode>
+<section id="feed" class="p-6 bg-[#E5E7EB]">
+    <!-- Stories/Featured Section -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">Featured Collections</h2>
+        <div class="overflow-x-auto no-scrollbar">
+            <div class="flex space-x-4 pb-4">
+                <div class="w-[297px] flex-shrink-0">
+                    <img src="https://a.ltrbxd.com/resized/story/image/2/3/7/6/6/9/shard/32356/image-hxnldkgm-352-352-0-0-fill.jpg" alt="Featured Story" class="rounded-lg w-full h-[167px] object-cover mb-2">
+                    <h3 class="font-medium">Must-Watch Classics</h3>
+                    <p class="text-sm text-gray-600">Curated by Cinema Enthusiasts</p>
+                </div>
+                <div class="w-[297px] flex-shrink-0">
+                    <img src="https://a.ltrbxd.com/resized/story/image/1/2/9/9/5/3/6/6/shard/32350/image-wohdipoa-352-352-0-0-fill.jpg" alt="Featured Story" class="rounded-lg w-full h-[167px] object-cover mb-2">
+                    <h3 class="font-medium">Contemporary Gems</h3>
+                    <p class="text-sm text-gray-600">Modern Masterpieces</p>
+                </div>
+                <div class="w-[297px] flex-shrink-0">
+                    <img src="https://a.ltrbxd.com/resized/story/image/1/3/8/6/0/4/2/3/shard/31121/image-zdptnqfx-352-352-0-0-fill.jpg" alt="Featured Story" class="rounded-lg w-full h-[167px] object-cover mb-2">
+                    <h3 class="font-medium">Hidden Treasures</h3>
+                    <p class="text-sm text-gray-600">Underrated Picks</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feed Items -->
+    <div class="space-y-6">
+        <!-- Feed Item 1 -->
+        <div class="bg-white rounded-lg p-4 border border-neutral-200/20">
+            <div class="flex items-center mb-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/twitter/4/9/0/4/5/7/shard/http___pbs.twimg.com_profile_images_1001935353740177414_9ZQ0Noe4-0-80-0-80-crop.jpg" alt="User Avatar" class="w-10 h-10 rounded-full">
+                <div class="ml-3">
+                    <h3 class="font-medium">Sarah Connor</h3>
+                    <p class="text-sm text-gray-600">2 hours ago</p>
+                </div>
+            </div>
+            <p class="mb-4">Just finished reading "The Art of War" - A timeless masterpiece that shaped my strategic thinking.</p>
+            <div class="bg-gray-50 p-4 rounded-lg border border-neutral-200/20">
+                <div class="flex items-center">
+                    <img src="https://s.ltrbxd.com/static/img/empty-poster-70.ba992711.png" alt="Content Thumbnail" class="w-16 h-24 object-cover rounded">
+                    <div class="ml-4">
+                        <h4 class="font-medium">The Art of War</h4>
+                        <p class="text-sm text-gray-600">by Sun Tzu</p>
+                        <a href="#" class="text-blue-600 text-sm">View on Amazon →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 flex items-center space-x-4 text-gray-600">
+                <button class="flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span>128</span>
+                </button>
+                <button class="flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <span>24</span>
+                </button>
+                <button class="flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                    </svg>
+                    <span>Share</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Feed Item 2 -->
+        <div class="bg-white rounded-lg p-4 border border-neutral-200/20">
+            <div class="flex items-center mb-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/upload/1/6/4/1/1/5/6/shard/avtr-0-80-0-80-crop.jpg" alt="User Avatar" class="w-10 h-10 rounded-full">
+                <div class="ml-3">
+                    <h3 class="font-medium">Alex Turner</h3>
+                    <p class="text-sm text-gray-600">5 hours ago</p>
+                </div>
+            </div>
+            <p class="mb-4">This YouTube video completely changed my perspective on productivity!</p>
+            <div class="bg-gray-50 p-4 rounded-lg border border-neutral-200/20">
+                <div class="flex items-center">
+                    <img src="https://s.ltrbxd.com/static/img/empty-poster-70.ba992711.png" alt="Video Thumbnail" class="w-16 h-24 object-cover rounded">
+                    <div class="ml-4">
+                        <h4 class="font-medium">The Science of Productivity</h4>
+                        <p class="text-sm text-gray-600">TEDx Talks</p>
+                        <a href="#" class="text-blue-600 text-sm">Watch on YouTube →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 flex items-center space-x-4 text-gray-600">
+                <button class="flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    <span>85</span>
+                </button>
+                <button class="flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <span>16</span>
+                </button>
+                <button class="flex items-center space-x-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                    </svg>
+                    <span>Share</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="3b25ab95-1212-4fe4-b369-2bc68ccd8178" data-section-id="3b25ab95-1212-4fe4-b369-2bc68ccd8178">
+
+<htmlCode>
+<section id="profile" class="p-6 bg-[#E5E7EB]">
+    <!-- Profile Header -->
+    <div class="bg-white rounded-lg p-6 mb-6 border border-neutral-200/20">
+        <div class="flex items-start justify-between">
+            <div class="flex items-start space-x-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full">
+                <div>
+                    <h1 class="text-2xl font-bold">John Anderson</h1>
+                    <p class="text-gray-600">@johnanderson</p>
+                    <p class="text-sm text-gray-500 mt-2">Exploring content that shapes perspectives | Book lover | Film enthusiast</p>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <div>
+                            <span class="font-semibold">1,234</span>
+                            <span class="text-gray-600 text-sm">Following</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold">5,678</span>
+                            <span class="text-gray-600 text-sm">Followers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Edit Profile</button>
+        </div>
+    </div>
+
+    <!-- Content Stats -->
+    <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-lg border border-neutral-200/20">
+            <h3 class="text-lg font-semibold">Books</h3>
+            <p class="text-2xl font-bold">127</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-neutral-200/20">
+            <h3 class="text-lg font-semibold">Movies</h3>
+            <p class="text-2xl font-bold">89</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-neutral-200/20">
+            <h3 class="text-lg font-semibold">Articles</h3>
+            <p class="text-2xl font-bold">234</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-neutral-200/20">
+            <h3 class="text-lg font-semibold">Videos</h3>
+            <p class="text-2xl font-bold">156</p>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="bg-white rounded-lg p-6 mb-6 border border-neutral-200/20">
+        <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+        <div class="space-y-4">
+            <div class="flex items-center space-x-4 p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                <img src="https://s.ltrbxd.com/static/img/empty-poster-70.ba992711.png" alt="Content" class="w-12 h-16 rounded object-cover">
+                <div class="flex-1">
+                    <h3 class="font-medium">Added "The Psychology of Money" to Books</h3>
+                    <p class="text-sm text-gray-600">2 hours ago</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                <img src="https://a.ltrbxd.com/resized/film-poster/3/5/9/5/0/5/359505-nosferatu-2024-0-70-0-105-crop.jpg" alt="Content" class="w-12 h-16 rounded object-cover">
+                <div class="flex-1">
+                    <h3 class="font-medium">Watched "Nosferatu"</h3>
+                    <p class="text-sm text-gray-600">5 hours ago</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 p-3 hover:bg-gray-50 rounded-lg transition-colors">
+                <img src="https://a.ltrbxd.com/resized/film-poster/9/2/6/5/8/9/926589-nickel-boys-0-70-0-105-crop.jpg" alt="Content" class="w-12 h-16 rounded object-cover">
+                <div class="flex-1">
+                    <h3 class="font-medium">Added "The Nickel Boys" to Reading List</h3>
+                    <p class="text-sm text-gray-600">1 day ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collections -->
+    <div class="bg-white rounded-lg p-6 border border-neutral-200/20">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold">Collections</h2>
+            <button class="text-blue-600 hover:text-blue-700">View All</button>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/story/image/2/3/7/6/6/9/shard/32356/image-hxnldkgm-352-352-0-0-fill.jpg" alt="Collection" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="font-medium">Must-Read Books</h3>
+                    <p class="text-sm text-gray-600">15 items</p>
+                </div>
+            </div>
+            <div class="rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/story/image/1/2/9/9/5/3/6/6/shard/32350/image-wohdipoa-352-352-0-0-fill.jpg" alt="Collection" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="font-medium">Favorite Films</h3>
+                    <p class="text-sm text-gray-600">23 items</p>
+                </div>
+            </div>
+            <div class="rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/story/image/1/3/8/6/0/4/2/3/shard/31121/image-zdptnqfx-352-352-0-0-fill.jpg" alt="Collection" class="w-full h-40 object-cover">
+                <div class="p-3">
+                    <h3 class="font-medium">Learning Resources</h3>
+                    <p class="text-sm text-gray-600">45 items</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="36b607b1-87a8-4d95-ba9a-4573ec48ca72" data-section-id="36b607b1-87a8-4d95-ba9a-4573ec48ca72">
+
+<htmlCode>
+<section id="discover" class="p-6 bg-[#E5E7EB]">
+    <!-- Popular Categories -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">Browse Categories</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <button class="p-4 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50 transition-colors">
+                <span class="block text-lg mb-1">📚</span>
+                <span class="font-medium">Books</span>
+            </button>
+            <button class="p-4 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50 transition-colors">
+                <span class="block text-lg mb-1">🎬</span>
+                <span class="font-medium">Movies</span>
+            </button>
+            <button class="p-4 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50 transition-colors">
+                <span class="block text-lg mb-1">📺</span>
+                <span class="font-medium">TV Shows</span>
+            </button>
+            <button class="p-4 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50 transition-colors">
+                <span class="block text-lg mb-1">📱</span>
+                <span class="font-medium">Social Media</span>
+            </button>
+            <button class="p-4 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50 transition-colors">
+                <span class="block text-lg mb-1">📄</span>
+                <span class="font-medium">Articles</span>
+            </button>
+            <button class="p-4 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50 transition-colors">
+                <span class="block text-lg mb-1">🎮</span>
+                <span class="font-medium">Games</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Trending Collections -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">Trending Collections</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/ze/qc/wa/z1/secrets%20&%20lies-310-310-174-174-crop-fill.png" alt="Collection" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-medium text-lg">Personal Growth Essentials</h3>
+                    <p class="text-gray-600 text-sm mb-3">Curated by @mindful_reader</p>
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <span>156 items</span>
+                        <span>•</span>
+                        <span>1.2k followers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/q5/0z/lw/1u/7IuitIwDY7Oxd6b3rMyMfjymV8g-310-310-174-174-crop-fill.jpg" alt="Collection" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-medium text-lg">Tech Visionaries</h3>
+                    <p class="text-gray-600 text-sm mb-3">Curated by @tech_insider</p>
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <span>89 items</span>
+                        <span>•</span>
+                        <span>845 followers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/59/i2/3d/xv/margaret-310-310-174-174-crop-fill.jpg" alt="Collection" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-medium text-lg">Creative Inspiration</h3>
+                    <p class="text-gray-600 text-sm mb-3">Curated by @artsy_soul</p>
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <span>234 items</span>
+                        <span>•</span>
+                        <span>2.3k followers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Users -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold mb-4">Popular Users to Follow</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg flex items-center justify-between border border-neutral-200/20">
+                <div class="flex items-center space-x-3">
+                    <img src="https://a.ltrbxd.com/resized/avatar/twitter/4/9/0/4/5/7/shard/http___pbs.twimg.com_profile_images_1001935353740177414_9ZQ0Noe4-0-80-0-80-crop.jpg" alt="User" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-medium">Sarah Connor</h3>
+                        <p class="text-sm text-gray-600">Film & Literature Explorer</p>
+                    </div>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Follow</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg flex items-center justify-between border border-neutral-200/20">
+                <div class="flex items-center space-x-3">
+                    <img src="https://a.ltrbxd.com/resized/avatar/upload/1/6/4/1/1/5/6/shard/avtr-0-80-0-80-crop.jpg" alt="User" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-medium">Alex Turner</h3>
+                        <p class="text-sm text-gray-600">Digital Content Curator</p>
+                    </div>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Follow</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg flex items-center justify-between border border-neutral-200/20">
+                <div class="flex items-center space-x-3">
+                    <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="User" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-medium">Maya Chen</h3>
+                        <p class="text-sm text-gray-600">Knowledge Enthusiast</p>
+                    </div>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Follow</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended for You -->
+    <div>
+        <h2 class="text-xl font-semibold mb-4">Recommended for You</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+            <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://s.ltrbxd.com/static/img/empty-poster-70.ba992711.png" alt="Content" class="w-full h-48 object-cover">
+                <div class="p-3">
+                    <h3 class="font-medium">The Psychology of Money</h3>
+                    <p class="text-sm text-gray-600">Book • Morgan Housel</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+                <img src="https://a.ltrbxd.com/resized/film-poster/3/5/9/5/0/5/359505-nosferatu-2024-0-70-0-105-crop.jpg" alt="Content" class="w-full h-48 object-cover">
+                <div class="p-3">
+                    <h3 class="font-medium">Nosferatu</h3>
+                    <p class="text-sm text-gray-600">Movie • 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="45a16e62-91c2-43d3-a68d-b21483280442" data-section-id="45a16e62-91c2-43d3-a68d-b21483280442">
+
+<htmlCode>
+<section id="collections" class="p-6 bg-[#E5E7EB]">
+    <!-- Collections Header -->
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold">My Collections</h2>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            Create Collection
+        </button>
+    </div>
+
+    <!-- Collections Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Collection 1 -->
+        <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+            <div class="relative">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/ze/qc/wa/z1/secrets%20&%20lies-310-310-174-174-crop-fill.png" alt="Collection Cover" class="w-full h-48 object-cover">
+                <div class="absolute top-3 right-3">
+                    <button class="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Must-Read Books</h3>
+                <p class="text-gray-600 text-sm mb-3">A collection of life-changing books that shaped my perspective</p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>15 items</span>
+                    <span>Updated 2 days ago</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection 2 -->
+        <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+            <div class="relative">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/q5/0z/lw/1u/7IuitIwDY7Oxd6b3rMyMfjymV8g-310-310-174-174-crop-fill.jpg" alt="Collection Cover" class="w-full h-48 object-cover">
+                <div class="absolute top-3 right-3">
+                    <button class="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Productivity Hacks</h3>
+                <p class="text-gray-600 text-sm mb-3">Videos and articles about improving productivity</p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>28 items</span>
+                    <span>Updated yesterday</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection 3 -->
+        <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+            <div class="relative">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/59/i2/3d/xv/margaret-310-310-174-174-crop-fill.jpg" alt="Collection Cover" class="w-full h-48 object-cover">
+                <div class="absolute top-3 right-3">
+                    <button class="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Tech Insights</h3>
+                <p class="text-gray-600 text-sm mb-3">Latest technology trends and innovations</p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>42 items</span>
+                    <span>Updated 5 days ago</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection 4 -->
+        <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+            <div class="relative">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/pc/w3/60/56/Story%20Images%20(11)-310-310-174-174-crop-fill.jpg" alt="Collection Cover" class="w-full h-48 object-cover">
+                <div class="absolute top-3 right-3">
+                    <button class="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Inspiring Talks</h3>
+                <p class="text-gray-600 text-sm mb-3">Collection of motivational speeches and presentations</p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>19 items</span>
+                    <span>Updated 1 week ago</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection 5 -->
+        <div class="bg-white rounded-lg overflow-hidden border border-neutral-200/20">
+            <div class="relative">
+                <img src="https://a.ltrbxd.com/resized/sm/upload/yf/vg/ww/e2/Story%20Images%20(10)-310-310-174-174-crop-fill.jpg" alt="Collection Cover" class="w-full h-48 object-cover">
+                <div class="absolute top-3 right-3">
+                    <button class="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Film Masterpieces</h3>
+                <p class="text-gray-600 text-sm mb-3">Essential movies that everyone should watch</p>
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <span>31 items</span>
+                    <span>Updated 3 days ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="fb68743d-fa4c-4963-9398-f27adb7e4466" data-section-id="fb68743d-fa4c-4963-9398-f27adb7e4466">
+
+<htmlCode>
+<section id="activity" class="p-6 bg-[#E5E7EB]">
+    <!-- Activity Filters -->
+    <div class="mb-6 flex items-center space-x-4">
+        <h2 class="text-2xl font-semibold">Activity</h2>
+        <div class="flex space-x-2">
+            <button class="px-4 py-2 bg-white rounded-lg border border-neutral-200/20 text-blue-600 font-medium">All</button>
+            <button class="px-4 py-2 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50">Following</button>
+            <button class="px-4 py-2 bg-white rounded-lg border border-neutral-200/20 hover:bg-gray-50">Mentions</button>
+        </div>
+    </div>
+
+    <!-- Activity Feed -->
+    <div class="space-y-4">
+        <!-- Activity Item 1 -->
+        <div class="bg-white rounded-lg p-4 border border-neutral-200/20">
+            <div class="flex items-start space-x-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/twitter/4/9/0/4/5/7/shard/http___pbs.twimg.com_profile_images_1001935353740177414_9ZQ0Noe4-0-80-0-80-crop.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                <div class="flex-1">
+                    <div class="flex items-center space-x-2">
+                        <h3 class="font-medium">Sarah Connor</h3>
+                        <span class="text-gray-500">added to collection</span>
+                        <span class="font-medium">Must-Read Books</span>
+                    </div>
+                    <span class="text-sm text-gray-500">2 hours ago</span>
+                    <div class="mt-3 bg-gray-50 rounded-lg p-3 border border-neutral-200/20">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://s.ltrbxd.com/static/img/empty-poster-70.ba992711.png" alt="Content" class="w-16 h-24 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium">Atomic Habits</h4>
+                                <p class="text-sm text-gray-600">James Clear</p>
+                                <a href="#" class="text-blue-600 text-sm">View on Amazon →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Item 2 -->
+        <div class="bg-white rounded-lg p-4 border border-neutral-200/20">
+            <div class="flex items-start space-x-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/upload/1/6/4/1/1/5/6/shard/avtr-0-80-0-80-crop.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                <div class="flex-1">
+                    <div class="flex items-center space-x-2">
+                        <h3 class="font-medium">Alex Turner</h3>
+                        <span class="text-gray-500">watched</span>
+                    </div>
+                    <span class="text-sm text-gray-500">5 hours ago</span>
+                    <div class="mt-3 bg-gray-50 rounded-lg p-3 border border-neutral-200/20">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://a.ltrbxd.com/resized/film-poster/3/5/9/5/0/5/359505-nosferatu-2024-0-70-0-105-crop.jpg" alt="Content" class="w-16 h-24 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium">Nosferatu</h4>
+                                <p class="text-sm text-gray-600">2024 • Horror</p>
+                                <div class="flex items-center mt-2">
+                                    <div class="flex text-yellow-400">
+                                        ★★★★<span class="text-gray-300">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Item 3 -->
+        <div class="bg-white rounded-lg p-4 border border-neutral-200/20">
+            <div class="flex items-start space-x-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                <div class="flex-1">
+                    <div class="flex items-center space-x-2">
+                        <h3 class="font-medium">John Anderson</h3>
+                        <span class="text-gray-500">created a new collection</span>
+                    </div>
+                    <span class="text-sm text-gray-500">1 day ago</span>
+                    <div class="mt-3 bg-gray-50 rounded-lg p-3 border border-neutral-200/20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-medium">Tech Innovations 2024</h4>
+                                <p class="text-sm text-gray-600">A collection of groundbreaking tech content</p>
+                            </div>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Item 4 -->
+        <div class="bg-white rounded-lg p-4 border border-neutral-200/20">
+            <div class="flex items-start space-x-4">
+                <img src="https://a.ltrbxd.com/resized/avatar/twitter/2/3/7/6/6/9/shard/http___pbs.twimg.com_profile_images_1164765400623538176_BSfKiCy6-0-48-0-48-crop.jpg" alt="User Avatar" class="w-12 h-12 rounded-full">
+                <div class="flex-1">
+                    <div class="flex items-center space-x-2">
+                        <h3 class="font-medium">Emma Wilson</h3>
+                        <span class="text-gray-500">liked</span>
+                        <span class="font-medium">your collection</span>
+                    </div>
+                    <span class="text-sm text-gray-500">2 days ago</span>
+                    <div class="mt-3 bg-gray-50 rounded-lg p-3 border border-neutral-200/20">
+                        <div class="flex items-center space-x-3">
+                            <img src="https://a.ltrbxd.com/resized/story/image/1/9/8/3/1/0/5/shard/32345/image-mszwfceo-352-352-0-0-fill.jpg" alt="Collection Cover" class="w-16 h-16 rounded object-cover">
+                            <div>
+                                <h4 class="font-medium">Productivity Essentials</h4>
+                                <p class="text-sm text-gray-600">15 items • Updated 3 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="5c7f6ab4-9099-4c92-88b2-88b05aa54691" data-section-id="5c7f6ab4-9099-4c92-88b2-88b05aa54691">
+
+<htmlCode>
+<section id="settings" class="p-6 bg-[#E5E7EB]">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-6">Settings</h2>
+        
+        <!-- Settings Navigation -->
+        <div class="bg-white rounded-lg border border-neutral-200/20 mb-6">
+            <div class="flex border-b border-neutral-200/20">
+                <button class="px-6 py-3 text-blue-600 border-b-2 border-blue-600 font-medium">Profile</button>
+                <button class="px-6 py-3 text-gray-600 hover:text-gray-900">Account</button>
+                <button class="px-6 py-3 text-gray-600 hover:text-gray-900">Privacy</button>
+                <button class="px-6 py-3 text-gray-600 hover:text-gray-900">Notifications</button>
+                <button class="px-6 py-3 text-gray-600 hover:text-gray-900">Integrations</button>
+            </div>
+        </div>
+
+        <!-- Profile Settings -->
+        <div class="bg-white rounded-lg border border-neutral-200/20 p-6">
+            <div class="mb-8">
+                <h3 class="text-lg font-medium mb-4">Profile Picture</h3>
+                <div class="flex items-center space-x-6">
+                    <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="Current Profile Picture" class="w-24 h-24 rounded-full">
+                    <div>
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Upload New Picture</button>
+                        <p class="text-sm text-gray-500 mt-2">Maximum file size: 2MB</p>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="space-y-6">
+                    <!-- Basic Information -->
+                    <div>
+                        <h3 class="text-lg font-medium mb-4">Basic Information</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Display Name</label>
+                                <input type="text" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" value="John Anderson">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Username</label>
+                                <input type="text" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" value="@johnanderson">
+                            </div>
+                            <div class="col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Bio</label>
+                                <textarea class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="4">Content curator and digital explorer. Sharing what shapes my perspective.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h3 class="text-lg font-medium mb-4">Social Links</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Twitter</label>
+                                <input type="url" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="https://twitter.com/username">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Instagram</label>
+                                <input type="url" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="https://instagram.com/username">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Website</label>
+                                <input type="url" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="https://yourwebsite.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div>
+                        <h3 class="text-lg font-medium mb-4">Content Preferences</h3>
+                        <div class="space-y-4">
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" checked>
+                                <span class="text-gray-700">Show content ratings in feed</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" checked>
+                                <span class="text-gray-700">Allow others to see my collections</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <span class="text-gray-700">Send me weekly content recommendations</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" class="px-4 py-2 border border-neutral-200/20 rounded-lg hover:bg-gray-50">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</htmlCode></element><element id="7e1b0276-6eb5-440e-9cd1-5798e9a3c8ad" data-section-id="7e1b0276-6eb5-440e-9cd1-5798e9a3c8ad">
+
+<htmlCode>
+<section id="authentication" class="min-h-screen bg-[#E5E7EB] flex items-center justify-center p-6">
+    <div class="max-w-md w-full">
+        <!-- Logo -->
+        <div class="text-center mb-8">
+            <img src="https://s.ltrbxd.com/static/img/icons/touch-icon-192x192.aac7a971.png" alt="Logo" class="h-12 mx-auto mb-4">
+            <h2 class="text-2xl font-bold">Welcome to ContentVault</h2>
+            <p class="text-gray-600">Track and share content that shapes you</p>
+        </div>
+
+        <!-- Auth Tabs -->
+        <div class="bg-white rounded-lg shadow-sm border border-neutral-200/20 overflow-hidden">
+            <div class="flex border-b border-neutral-200/20">
+                <button class="flex-1 px-6 py-3 text-blue-600 border-b-2 border-blue-600 font-medium">Sign In</button>
+                <button class="flex-1 px-6 py-3 text-gray-600 hover:text-gray-900">Sign Up</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <div class="p-6">
+                <!-- Social Login Buttons -->
+                <div class="space-y-3 mb-6">
+                    <button class="w-full flex items-center justify-center space-x-2 px-4 py-2 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        </svg>
+                        <span>Continue with Google</span>
+                    </button>
+                    <button class="w-full flex items-center justify-center space-x-2 px-4 py-2 border border-neutral-200/20 rounded-lg hover:bg-gray-50 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.164 6.839 9.49.5.09.682-.218.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                        </svg>
+                        <span>Continue with GitHub</span>
+                    </button>
+                </div>
+
+                <div class="relative mb-6">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-neutral-200/20"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                    </div>
+                </div>
+
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                        <input type="password" class="w-full px-4 py-2 rounded-lg border border-neutral-200/20 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="••••••••">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                            <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                        </label>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-700">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+        <p class="text-center mt-6 text-sm text-gray-600">
+            Don't have an account? <a href="#" class="text-blue-600 hover:text-blue-700">Sign up</a>
+        </p>
+    </div>
+</section>
+</htmlCode></element><element id="49acdbe0-738d-428b-9ea7-e8f92d525a8f" data-section-id="49acdbe0-738d-428b-9ea7-e8f92d525a8f">
+
+<htmlCode>
+<div id="root">
+    <section id="search" class="min-h-screen bg-neutral-900 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Search Header -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold mb-2">Search</h1>
+                <div class="relative">
+                    <input type="search" 
+                           placeholder="Search for content, users, or collections..." 
+                           class="w-full py-3 px-4 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-neutral-500 text-lg">
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                        <svg class="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Options -->
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">All</button>
+                <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">Books</button>
+                <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">Movies</button>
+                <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">Articles</button>
+                <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">Videos</button>
+                <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">Users</button>
+            </div>
+
+            <!-- Search Results -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Result Card 1 -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden hover:bg-neutral-700 transition">
+                    <div class="aspect-video relative">
+                        <img src="https://a.ltrbxd.com/resized/film-poster/3/5/9/5/0/5/359505-nosferatu-2024-0-70-0-105-crop.jpg" alt="Content thumbnail" class="w-full h-full object-cover"/>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Nosferatu (2024)</h3>
+                        <p class="text-neutral-400 text-sm mb-2">Movie • Horror</p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full"/>
+                            <span class="text-sm text-neutral-400">Added by @cinephile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Card 2 -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden hover:bg-neutral-700 transition">
+                    <div class="aspect-video relative">
+                        <img src="https://a.ltrbxd.com/resized/film-poster/9/2/6/5/8/9/926589-nickel-boys-0-70-0-105-crop.jpg" alt="Content thumbnail" class="w-full h-full object-cover"/>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Nickel Boys</h3>
+                        <p class="text-neutral-400 text-sm mb-2">Book • Drama</p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://a.ltrbxd.com/resized/avatar/twitter/4/9/0/4/5/7/shard/http___pbs.twimg.com_profile_images_1001935353740177414_9ZQ0Noe4-0-80-0-80-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full"/>
+                            <span class="text-sm text-neutral-400">Added by @bookworm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Card 3 -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden hover:bg-neutral-700 transition">
+                    <div class="aspect-video relative">
+                        <img src="https://a.ltrbxd.com/resized/alternative-poster/3/5/9/5/0/5/p/ww9lWF9ljIMjj0KuWpykGB0tGLx-0-70-0-105-crop.jpg" alt="Content thumbnail" class="w-full h-full object-cover"/>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Alternative View</h3>
+                        <p class="text-neutral-400 text-sm mb-2">Article • Analysis</p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://a.ltrbxd.com/resized/avatar/upload/1/6/4/1/1/5/6/shard/avtr-0-80-0-80-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full"/>
+                            <span class="text-sm text-neutral-400">Added by @critic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-8">
+                <button class="px-6 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition">
+                    Load More Results
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
