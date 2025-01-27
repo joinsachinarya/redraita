@@ -1279,24 +1279,25 @@ html {
 
 <htmlCode>
 <div id="root">
-    <section id="search" class="min-h-screen bg-neutral-900 text-white py-8 px-4">
+    <section id="search" class="min-h-screen bg-neutral-900 text-neutral-100 px-4 py-8">
         <div class="max-w-7xl mx-auto">
             <!-- Search Header -->
             <div class="mb-8">
-                <h1 class="text-3xl font-bold mb-2">Search</h1>
+                <h2 class="text-3xl font-bold mb-4">Search</h2>
                 <div class="relative">
                     <input type="search" 
                            placeholder="Search for content, users, or collections..." 
-                           class="w-full py-3 px-4 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-neutral-500 text-lg">
-                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                        <svg class="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                           class="w-full py-3 px-4 bg-neutral-800 border border-neutral-700 rounded-lg focus:outline-none focus:border-neutral-500 text-lg"
+                    >
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </button>
                 </div>
             </div>
 
-            <!-- Filter Options -->
+            <!-- Filters -->
             <div class="flex flex-wrap gap-4 mb-8">
                 <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">All</button>
                 <button class="px-4 py-2 bg-neutral-800 rounded-full hover:bg-neutral-700 transition">Books</button>
@@ -1310,52 +1311,67 @@ html {
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Result Card 1 -->
                 <div class="bg-neutral-800 rounded-lg overflow-hidden hover:bg-neutral-700 transition">
-                    <div class="aspect-video relative">
-                        <img src="https://a.ltrbxd.com/resized/film-poster/3/5/9/5/0/5/359505-nosferatu-2024-0-70-0-105-crop.jpg" alt="Content thumbnail" class="w-full h-full object-cover"/>
-                    </div>
+                    <img src="https://a.ltrbxd.com/resized/sm/upload/ze/qc/wa/z1/secrets%20&%20lies-310-310-174-174-crop-fill.png" alt="Content thumbnail" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Nosferatu (2024)</h3>
-                        <p class="text-neutral-400 text-sm mb-2">Movie • Horror</p>
-                        <div class="flex items-center gap-2">
-                            <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full"/>
-                            <span class="text-sm text-neutral-400">Added by @cinephile</span>
+                        <h3 class="text-lg font-semibold mb-2">Secrets & Lies</h3>
+                        <p class="text-neutral-400 text-sm mb-3">Drama • 1996</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://a.ltrbxd.com/resized/avatar/upload/4/7/9/1/7/2/8/shard/avtr-0-32-0-32-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full">
+                                <span class="ml-2 text-sm text-neutral-400">Added by @cinephile</span>
+                            </div>
+                            <button class="text-neutral-400 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Result Card 2 -->
                 <div class="bg-neutral-800 rounded-lg overflow-hidden hover:bg-neutral-700 transition">
-                    <div class="aspect-video relative">
-                        <img src="https://a.ltrbxd.com/resized/film-poster/9/2/6/5/8/9/926589-nickel-boys-0-70-0-105-crop.jpg" alt="Content thumbnail" class="w-full h-full object-cover"/>
-                    </div>
+                    <img src="https://a.ltrbxd.com/resized/sm/upload/q5/0z/lw/1u/7IuitIwDY7Oxd6b3rMyMfjymV8g-310-310-174-174-crop-fill.jpg" alt="Content thumbnail" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Nickel Boys</h3>
-                        <p class="text-neutral-400 text-sm mb-2">Book • Drama</p>
-                        <div class="flex items-center gap-2">
-                            <img src="https://a.ltrbxd.com/resized/avatar/twitter/4/9/0/4/5/7/shard/http___pbs.twimg.com_profile_images_1001935353740177414_9ZQ0Noe4-0-80-0-80-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full"/>
-                            <span class="text-sm text-neutral-400">Added by @bookworm</span>
+                        <h3 class="text-lg font-semibold mb-2">The Lost City</h3>
+                        <p class="text-neutral-400 text-sm mb-3">Adventure • 2022</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://a.ltrbxd.com/resized/avatar/twitter/4/9/0/4/5/7/shard/http___pbs.twimg.com_profile_images_1001935353740177414_9ZQ0Noe4-0-80-0-80-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full">
+                                <span class="ml-2 text-sm text-neutral-400">Added by @moviebuff</span>
+                            </div>
+                            <button class="text-neutral-400 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Result Card 3 -->
                 <div class="bg-neutral-800 rounded-lg overflow-hidden hover:bg-neutral-700 transition">
-                    <div class="aspect-video relative">
-                        <img src="https://a.ltrbxd.com/resized/alternative-poster/3/5/9/5/0/5/p/ww9lWF9ljIMjj0KuWpykGB0tGLx-0-70-0-105-crop.jpg" alt="Content thumbnail" class="w-full h-full object-cover"/>
-                    </div>
+                    <img src="https://a.ltrbxd.com/resized/sm/upload/59/i2/3d/xv/margaret-310-310-174-174-crop-fill.jpg" alt="Content thumbnail" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-lg font-semibold mb-2">Alternative View</h3>
-                        <p class="text-neutral-400 text-sm mb-2">Article • Analysis</p>
-                        <div class="flex items-center gap-2">
-                            <img src="https://a.ltrbxd.com/resized/avatar/upload/1/6/4/1/1/5/6/shard/avtr-0-80-0-80-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full"/>
-                            <span class="text-sm text-neutral-400">Added by @critic</span>
+                        <h3 class="text-lg font-semibold mb-2">Margaret</h3>
+                        <p class="text-neutral-400 text-sm mb-3">Drama • 2011</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://a.ltrbxd.com/resized/avatar/upload/1/6/4/1/1/5/6/shard/avtr-0-80-0-80-crop.jpg" alt="User avatar" class="w-6 h-6 rounded-full">
+                                <span class="ml-2 text-sm text-neutral-400">Added by @filmcritic</span>
+                            </div>
+                            <button class="text-neutral-400 hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Load More Button -->
-            <div class="text-center mt-8">
+            <!-- Load More -->
+            <div class="mt-8 text-center">
                 <button class="px-6 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition">
                     Load More Results
                 </button>
